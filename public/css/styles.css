@@ -1053,8 +1053,8 @@ html {
     }
 
     .paddingLR10vw{
-    padding: 0 5vw;
-}
+        padding: 0 5vw;
+    }
 
     /* CUSTOM STYLES */
     .logo {
@@ -1189,6 +1189,14 @@ html {
     }
 
     /* SECT2 - WHAT MAKES US DIFFERENT */
+    #sect2 {
+        padding: 40px 0 0;
+    }
+
+    .sect2ItemContainer {
+        padding-left: 5vw;
+    }
+
     .sect2Item {
         min-width: 80%;
         max-width: 90%;
@@ -1226,8 +1234,9 @@ html {
     /* SECT3 - BOARDING EXPERIENCE */
     .sect3ItemContainer {
         gap: 16px;
-        padding: 0 16px;
+        padding: 16px 0;
     }
+
     .sect3ItemRow{
         flex-direction: column;
         gap: 16px;
