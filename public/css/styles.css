@@ -662,12 +662,12 @@ html {
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
     gap: 24px;
-    padding-left: 10vw;
+    padding: 0 5vw 0 10vw;
 }
 
 .sect2Item{
-    min-width: 80%;   
-    max-width: 90%;  
+    min-width: 60%;   
+    max-width: 65%;  
     flex: 0 0 auto;      
     background: #2F4293;
     border-radius: 16px;
@@ -679,7 +679,7 @@ html {
 
 .sect2ItemLeft{
     width: 50%;
-    min-height: 320px;
+    min-height: 400px;
     padding: 48px 40px;
     text-align: left;
 }
@@ -713,9 +713,31 @@ html {
 .sect3ItemContainer{
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 24px;
     padding: 24px 0;
+}
+
+.sect3ItemCol1 {
+    height: auto;
+    display: flex;
+    padding: 24px;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border-radius: 16px;
+}
+
+.sect3ItemCol2 {
+    height: auto;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    box-sizing: border-box;
+    border-radius: 16px;
+    gap: 24px;
+
 }
 
 .sect3ItemRow{
@@ -727,50 +749,25 @@ html {
 
 .sect3ItemCol {
     height: auto;
-    align-self: stretch;
     display: flex;
     flex-direction: column;
+    flex: 1 1 0;
     justify-content: center;
     box-sizing: border-box;
     border-radius: 16px;
-}
-
-.sect3ItemRow1Col1 {
-    flex: 1 1 0;
-    min-width: 0;
-    padding: 24px;
-    align-items: center;
-}
-
-.sect3ItemRow1Col2 {
-    width: 45%;
     padding: 32px 24px;
 }
 
-.sect3ItemRow1Col3 {
-    width: 30%;
+.sect3ItemImg1 {
     background-image: url("../images/sect3ItemPic-1.jpg");
     background-size: cover;
     background-position: center;
 }
 
-.sect3ItemRow2Col1 {
-    width: 40%;
+.sect3ItemImg2 {
     background-image: url("../images/sect3ItemPic-2.jpg");
     background-size: cover;
     background-position: center;
-}
-
-.sect3ItemRow2Col2 {
-    width: 35%;
-    padding: 32px 24px;
-}
-
-.sect3ItemRow2Col3 {
-    flex: 1 1 0;
-    min-width: 0;
-    padding: 24px;
-    align-items: center;
 }
 
 .highlightContainer {
@@ -793,7 +790,7 @@ html {
 .highlightContainerItem {
     min-height: 200px;
     width: 20%;
-    padding:  16px;
+    padding:  24px;
     position: relative;
     background-color: #ADD7F6;
     transition: background 0.3s cubic-bezier(0.4,0,0.2,1), min-height 0.4s cubic-bezier(0.4,0,0.2,1);
@@ -804,7 +801,7 @@ html {
 /* HideOnHover: visible by default, fades out on hover */
 .hideOnHover {
     opacity: 1;
-    max-height: 500px;
+    /* max-height: 500px; Jangan pake kalau ga mau ada efek spring*/ 
     overflow: hidden;
     transition: opacity 0.4s, max-height 0.4s;
     pointer-events: auto;
@@ -822,7 +819,7 @@ html {
 
 /* On hover: fade out .hideOnHover, fade in .showOnHover, change background */
 .highlightContainerItem:hover {
-    background-color: #F5F5F5 !important;
+    background-color: #F5F5F5;
     min-height: 200px;
 }
 
@@ -1198,7 +1195,7 @@ html {
     }
 
     .sect2Item {
-        min-width: 80%;
+        min-width: 90%;
         max-width: 90%;
         flex: 1 1 1;
         border-radius: 16px;
@@ -1233,13 +1230,29 @@ html {
 
     /* SECT3 - BOARDING EXPERIENCE */
     .sect3ItemContainer {
+        flex-direction: column;
         gap: 16px;
-        padding: 16px 0;
+    }
+
+    .sect3ItemCol2 {
+        gap: 16px;
     }
 
     .sect3ItemRow{
         flex-direction: column;
         gap: 16px;
+    }
+
+    .sect3ItemCol {
+        display: flex;
+        flex-direction: column;
+        padding: 32px 24px;
+    }
+
+    .sect3ItemImg1, .sect3ItemImg2  {
+        height: 320px;
+        min-height: 320px;
+        width: 100%;
     }
 
     .highlightContainer {
@@ -1252,17 +1265,7 @@ html {
         width: 100%;
         padding: 24px 24px;
     }
-
-    .sect3ItemRow1Col1,
-    .sect3ItemRow1Col2,
-    .sect3ItemRow1Col3,
-    .sect3ItemRow2Col1,
-    .sect3ItemRow2Col2,
-    .sect3ItemRow2Col3 {
-        width: 100%;
-        min-height: 160px;
-    }
-
+    
     .iconHighlight1,
     .iconHighlight2,
     .iconHighlight3,

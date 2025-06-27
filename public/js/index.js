@@ -45,7 +45,7 @@ closeOffCanvasLinks.forEach((link) => {
 });
 
 // Parallax speeds for each box (higher = moves faster)
-const parallaxSpeeds = [0.8, 0.5, 0.7, 0.4, -0.3, -0.5, -0.1, -0.15];
+const parallaxSpeeds = [0.05, 0.1, 0.07, 0.02, -0.1, -0.05, -0.2, -0.1];
 
 function parallaxBoxes() {
     const scrollY = window.scrollY;
@@ -152,7 +152,7 @@ if (slideImagerImages && slideImages.length > 0) {
 
   // Recalculate slideImagerImagesWidth when the window is resized
   window.addEventListener('resize', () => {
-    slideImagerImagesWidth = slideImagerImages.clientWidth;
+    slideImagerImagesWidth = slideImages[currentIndex] ? slideImages[currentIndex].offsetWidth : 0;
     updateslideImagerImages();
   });
 
