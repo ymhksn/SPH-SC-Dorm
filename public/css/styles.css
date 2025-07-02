@@ -411,7 +411,7 @@ html {
     aspect-ratio: 3.23;
     object-fit: contain;
     object-position: left;
-    width: 200px;
+    width: 240px;
     max-width: 100%;
     min-width: 150px;
 }
@@ -476,6 +476,7 @@ html {
     background-image: url("../images/mainBanner.jpg");
     background-position: center bottom;
     background-size: cover;
+    z-index: 1;
 }
 
 .mainBannerContent {
@@ -975,11 +976,33 @@ html {
     background-position: center;
     padding-top: 80px;
     padding-bottom: 80px;
+    position: relative;
+    z-index: 1;
+}
+
+#sect5::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 2;
+    pointer-events: none;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0) 40%,
+        rgba(0,0,0,0.5) 100%
+    );
 }
 
 .sect5Container{
    margin: 0; 
 }
+
+.formStyle{
+    position: relative;
+    z-index: 5;
+    /* color: white; */
+}
+
 
 /* FOOTER */
 .footerTabContainer {
@@ -990,15 +1013,6 @@ html {
 
 .footerTabContainerItem {
     width: 20%;
-}
-
-.logoImg {
-    height: 60px;
-    width: 100%;
-    background-image: url("../images/logoSPH.png");
-    background-size: contain;
-    background-position: left;
-    background-repeat: no-repeat;
 }
 
 /* CSS FOR MOBILE */
